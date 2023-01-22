@@ -1,4 +1,5 @@
 if  [[ $1 = "-b" ]]; then
+    cd ./rpi2b
     mkdir src
     mkdir src/raspi2b
     apt-get update -y
