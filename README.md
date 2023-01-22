@@ -1,8 +1,7 @@
 # raspberry-pi-emulators
 This repository includes solutions to easily deploy Raspberry Pï emulators on any Debian-based operating system supporting Docker.
 
-[**QEMU**]("https://github.com/qemu/qemu"), licensed under the [GNU General
-Public License, version 2]("https://github.com/qemu/qemu/blob/master/COPYING"), is the emulator software supporting all the presented boards, which are initially ARM-based. 
+[**QEMU**]("https://github.com/qemu/qemu"), licensed under the [GNU General Public License, version 2]("https://github.com/qemu/qemu/blob/master/COPYING"), is the emulator software supporting all the presented boards, which are initially ARM-based. 
 
 This project uses [Docker]("https://github.com/docker/docker-ce-packaging"), which is licensed under the [Apache 2.0 License]("https://github.com/docker/docker-ce-packaging/blob/master/LICENSE").
 
