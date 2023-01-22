@@ -1,0 +1,34 @@
+FROM ubuntu:16.04
+
+RUN mkdir /home/raspi2b
+RUN mkdir /home/raspi2b/boot2b
+COPY ./src/raspi2b/2016-05-27-raspbian-jessie.img /home/raspi2b/
+COPY ./src/raspi2b/qemu-2.9.0.tar.xz /home/raspi2b/
+COPY ./src/raspi2b/boot2b/kernel7.img /home/raspi2b/boot2b/
+COPY ./src/raspi2b/boot2b/bcm2709-rpi-2-b.dtb /home/raspi2b/boot2b/
+
+RUN apt-get update -y
+RUN apt-get install xz-utils -y
+
+WORKDIR /home/raspi2b
+RUN tar -xvJf ./qemu-2.9.0.tar.xz
+
+RUN apt-get update -y
+RUN apt-get install -y gcc make ninja-build pkg-config libglib2.0-dev
+RUN apt-get install -y libpixman-1-dev libcairo2-dev libpango1.0-dev libjpeg8-dev libgif-dev;
+RUN apt-get install -y python libfdt-dev;
+RUN apt-get install -y libgtk2.0-dev;
+RUN apt-get install xz-utils -y
+RUN apt-get update -y && apt-get upgrade -y;
+
+WORKDIR /home/raspi2b/qemu-2.9.0
+RUN mkdir build
+WORKDIR /home/raspi2b/qemu-2.9.0/build
+
+RUN ../configure --target-list=arm-softmmu --disable-gtk
+RUN make -j `nproc`
+
+
+WORKDIR /home/raspi2b
+
+
