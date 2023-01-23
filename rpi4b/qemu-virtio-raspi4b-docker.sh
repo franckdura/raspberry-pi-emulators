@@ -4,7 +4,7 @@ if  [[ $1 = "-b" ]]; then
     mkdir src/raspi4b-virtio
     apt-get update -y
     apt-get install -y wget unzip
-    wget https://raspi.debian.net/tested/20220121_raspi_4_bullseye.img.xz -P ./src/raspi4b-virtio
+    wget https://raspi.debian.net/tested/20230102_raspi_4_bullseye.img.xz -P ./src/raspi4b-virtio
     cd ./src/raspi4b-virtio
     unxz 20220121_raspi_4_bullseye.img.xz
     IMAGE=`find ./ -name '2*.img'`
