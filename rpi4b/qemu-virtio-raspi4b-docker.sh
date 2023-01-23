@@ -1,5 +1,5 @@
 if  [[ $1 = "-b" ]]; then
-    cd rpi3b+
+    cd rpi4b
     mkdir src
     mkdir src/raspi4b-virtio
     apt-get update -y
