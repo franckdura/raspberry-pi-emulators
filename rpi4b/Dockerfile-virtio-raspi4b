@@ -4,10 +4,10 @@ ARG DEBIAN_FRONTEND=noninteractive
 RUN mkdir /home/raspi4b
 RUN mkdir /home/raspi4b/boot4b
 
-COPY ./src/raspi4b-virtio/20230102_raspi_4_bullseye.img /home/raspi4b/
+COPY ./src/raspi4b-virtio/20230101_raspi_4_bookworm.img /home/raspi4b/
 COPY ./src/raspi4b-virtio/qemu-6.2.0.tar.xz /home/raspi4b/
-COPY ./src/raspi4b-virtio/boot4b/vmlinuz-5.10.0-20-arm64 /home/raspi4b/boot4b/
-COPY ./src/raspi4b-virtio/boot4b/initrd.img-5.10.0-20-arm64 /home/raspi4b/boot4b/
+COPY ./src/raspi4b-virtio/boot4b/vmlinuz-6.0.0-6-arm64 /home/raspi4b/boot4b/
+COPY ./src/raspi4b-virtio/boot4b/initrd.img-6.0.0-6-arm64 /home/raspi4b/boot4b/
 
 RUN apt-get update -y
 RUN apt-get install xz-utils -y
