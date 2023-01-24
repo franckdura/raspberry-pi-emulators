@@ -28,4 +28,4 @@ else
     docker start raspi4bvirtio
 fi
 
-docker exec -it raspi4bvirtio /bin/bash -c "./qemu-6.2.0/build/aarch64-softmmu/qemu-system-aarch64 -m 4096 -M virt -cpu cortex-a72 -smp 4 -kernel ./boot4b/vmlinuz-6.0.0-6-arm64 -initrd ./boot4b/initrd.img-6.0.0-6-arm64 -drive file=./20230102_raspi_4_bullseye.img,if=none,format=raw,id=hdroot -append 'rw root=/dev/vda2 console=ttyAMA0 loglevel=8 rootwait fsck.repair=yes memtest=1' -device virtio-blk-device,drive=hdroot -netdev user,id=net0,hostfwd=tcp::2222-:22 -device virtio-net-device,netdev=net0 -no-reboot -nographic"
+docker exec -it raspi4bvirtio /bin/bash -c "./qemu-6.2.0/build/aarch64-softmmu/qemu-system-aarch64 -m 4096 -M virt -cpu cortex-a72 -smp 4 -kernel ./boot4b/vmlinuz-5.10.0-20-arm64 -initrd ./boot4b/initrd.img-5.10.0-20-arm64 -drive file=./20230102_raspi_4_bullseye.img,if=none,format=raw,id=hdroot -append 'rw root=/dev/vda2 console=ttyAMA0 loglevel=8 rootwait fsck.repair=yes memtest=1' -device virtio-blk-device,drive=hdroot -netdev user,id=net0,hostfwd=tcp::2222-:22 -device virtio-net-device,netdev=net0 -no-reboot -nographic"
