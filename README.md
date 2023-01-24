@@ -69,6 +69,9 @@ bash rpi2b/qemu-official-raspi2b-docker.sh -b
 bash rpi2b/qemu-official-raspi2b-docker.sh
 ``` 
 
+<br>
+
+
 ## <a id="rpi3b"></a>**Raspberry PI 3b+**
 <br>
 This script runs the official Qemu 6.2.0 implementation of the Raspberry Pi 3b+ board, named `raspi3b`, in a Docker container.
