@@ -12,11 +12,7 @@ This project uses [Docker]("https://github.com/docker/docker-ce-packaging"), whi
 ### **[Terminate](#terminate)**<br>
 
 
-<br>
-
 ---
-
-<br>
 
 
 ## <a id="setup"></a>**Set Up**
@@ -115,7 +111,7 @@ This script runs a virtio machine (`virt`), implementing the same hardware as a 
 > It implements :
 > - Virtual CPU quad core cortex-a72 (ARMv8 64 bits)
 > - 4 GB RAM
-> - Raspios-arm64 (Bullseye-rpi4 2022-01-21 release)
+> - Raspios-arm64 (Bullseye-rpi4 2023-01-02 release)
 > - Networking & port forwarding from 2222 (host) to 22 (guest)
 
 First, use the command below to correctly format the script 
